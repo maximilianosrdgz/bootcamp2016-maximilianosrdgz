@@ -10,14 +10,32 @@ public class CurrentDay {
 
     private DayOfWeek day;
     private Date date;
-    private float temperature;
+    private float maxTemp;
+    private float minTemp;
     private String description;
 
-    public CurrentDay(DayOfWeek day, Date date, float temperature, String description) {
+    public CurrentDay(DayOfWeek day, Date date, float maxTemp, float minTemp, String description) {
         this.day = day;
         this.date = date;
-        this.temperature = temperature;
+        this.maxTemp = maxTemp;
+        this.minTemp = minTemp;
         this.description = description;
+    }
+
+    public float getMaxTemp() {
+        return maxTemp;
+    }
+
+    public void setMaxTemp(float maxTemp) {
+        this.maxTemp = maxTemp;
+    }
+
+    public float getMinTemp() {
+        return minTemp;
+    }
+
+    public void setMinTemp(float minTemp) {
+        this.minTemp = minTemp;
     }
 
     public DayOfWeek getDay() {
@@ -36,14 +54,6 @@ public class CurrentDay {
         this.date = date;
     }
 
-    public float getTemperature() {
-        return temperature;
-    }
-
-    public void setTemperature(float temperature) {
-        this.temperature = temperature;
-    }
-
     public String getDescription() {
         return description;
     }
@@ -56,8 +66,9 @@ public class CurrentDay {
     public String toString(){
         return "Day: "+day.toString()+
                 "\nDate: "+date.toString()+
-                "\nTemperature: "+temperature+
-                "\nDescrpition: "+description;
+                "\nMax Temperature: "+maxTemp+
+                "\nMin Temperature: "+minTemp+
+                "\nDescription: "+description;
     }
 
 

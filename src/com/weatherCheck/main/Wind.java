@@ -5,27 +5,27 @@ package com.weatherCheck.main;
  */
 public class Wind {
 
-    private int speed;
-    private int direction;
+    private float speed;
+    private float direction;
 
-    public Wind(int speed, int direction) {
+    public Wind(float speed, float direction) {
         this.speed = speed;
         this.direction = direction;
     }
 
-    public int getSpeed() {
+    public float getSpeed() {
         return speed;
     }
 
-    public void setSpeed(int speed) {
+    public void setSpeed(float speed) {
         this.speed = speed;
     }
 
-    public int getDirection() {
+    public float getDirection() {
         return direction;
     }
 
-    public void setDirection(int direction) {
+    public void setDirection(float direction) {
         this.direction = direction;
     }
 
