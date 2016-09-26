@@ -22,10 +22,11 @@ public class Main {
 
         try {
             // Establish the connection.
+            System.out.println("asd");
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
 
             con = DriverManager.getConnection(url, user, password);
-            System.out.println("asd");
+            System.out.println("asd1");
 
             // Create and execute an SQL statement that returns some data.
             String SQL = "SELECT * FROM Forecasts";
