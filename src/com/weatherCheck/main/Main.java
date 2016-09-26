@@ -25,9 +25,16 @@ public class Main {
             con = DriverManager.getConnection(url);
 
             // Create and execute an SQL statement that returns some data.
-            String SQL = "SELECT TOP 10 * FROM Person.Contact";
+            String SQL = "SELECT * FROM Forecasts";
             stmnt = con.createStatement();
             rs = stmnt.executeQuery(SQL);
+
+            System.out.println(rs.getInt("idForecast"));
+
+            rs.close();
+            stmnt.close();
+            con.close();
+
         }
         catch (Exception e){
 
