@@ -11,9 +11,10 @@ public class Main {
     public static void main(String [] args){
 
 
-
             String url = "jdbc:sqlserver://localhost:1433;" +
-                    "databaseName=WeatherCheckTest;user=MaxPower;password=";
+                    "databaseName=WeatherCheckTest";
+            String user="Cortana\\MaxPower";
+            String password="";
 
             Connection con=null;
             Statement stmnt=null;
@@ -22,13 +23,16 @@ public class Main {
         try {
             // Establish the connection.
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-            con = DriverManager.getConnection(url);
+
+            con = DriverManager.getConnection(url, user, password);
+            System.out.println("asd");
 
             // Create and execute an SQL statement that returns some data.
             String SQL = "SELECT * FROM Forecasts";
             stmnt = con.createStatement();
             rs = stmnt.executeQuery(SQL);
 
+            System.out.println("asd2");
             System.out.println(rs.getInt("idForecast"));
 
             rs.close();
