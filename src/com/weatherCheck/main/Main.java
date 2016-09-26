@@ -13,7 +13,7 @@ public class Main {
 
             String url = "jdbc:sqlserver://localhost:1433;" +
                     "databaseName=WeatherCheckTest";
-            String user="Cortana\\MaxPower";
+            String user="Cortana\\MaxPower"; //Ya probe con 'MaxPower' solo
             String password="";
 
             Connection con=null;
@@ -22,18 +22,20 @@ public class Main {
 
         try {
             // Establish the connection.
-            System.out.println("asd");
+            System.out.println("flag");  //Esto sale
+
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+            System.out.println("flag1"); //Esto también sale
 
             con = DriverManager.getConnection(url, user, password);
-            System.out.println("asd1");
+            System.out.println("flag2"); //Esto ya no sale
 
             // Create and execute an SQL statement that returns some data.
             String SQL = "SELECT * FROM Forecasts";
             stmnt = con.createStatement();
             rs = stmnt.executeQuery(SQL);
 
-            System.out.println("asd2");
+            System.out.println("flag3");
             System.out.println(rs.getInt("idForecast"));
 
             rs.close();
