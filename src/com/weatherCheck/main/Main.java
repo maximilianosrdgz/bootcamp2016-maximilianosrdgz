@@ -21,6 +21,7 @@ public class Main {
 
         Connection conn = null;
         Statement stmt = null;
+        Statement stmt2 = null;
         try {
             //JDBC driver
             Class.forName("com.mysql.jdbc.Driver");
@@ -29,7 +30,18 @@ public class Main {
             System.out.println("Flag 1 Connecting");
             conn = DriverManager.getConnection(DB_URL, USER, PASS);
 
-            //Query
+
+            //Test Update
+            stmt2 = conn.createStatement();
+            String update;
+            update = "INSERT ExtendedForecasts (idExtendedForecast, idForecast, date, weekDay, maxTemp, minTemp, description) VALUES (1, 1, '2016-02-02', 'monday', 2.2, 2.2, 'cloudy')";
+            System.out.println(update);
+            stmt2.executeUpdate(update);
+            System.out.println("Data added");
+
+
+
+            //Test Query
             System.out.println("Flag 2 Statement");
             stmt = conn.createStatement();
             String sql;
@@ -49,7 +61,9 @@ public class Main {
                 System.out.print(", Hum: " + humidity);
                 System.out.print(", Preass: " + preassure);
                 System.out.println(", Visib: " + visibility);
+
             }
+
 
             rs.close();
             stmt.close();
