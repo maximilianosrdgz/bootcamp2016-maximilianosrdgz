@@ -1,10 +1,10 @@
 -- Created by Vertabelo (http://vertabelo.com)
--- Last modification date: 2016-09-26 02:55:20.861
+-- Last modification date: 2016-09-28 19:04:58.855
 
 -- tables
 -- Table: AtmosphericDatas
 CREATE TABLE AtmosphericDatas (
-    idAtmosphericData int  NOT NULL,
+    idAtmosphericData int  NOT NULL AUTO_INCREMENT,
     humidity decimal(4,2)  NOT NULL,
     preasure decimal(4,2)  NOT NULL,
     visibility decimal(4,2)  NOT NULL,
@@ -13,7 +13,7 @@ CREATE TABLE AtmosphericDatas (
 
 -- Table: Cities
 CREATE TABLE Cities (
-    idCity int  NOT NULL,
+    idCity int  NOT NULL AUTO_INCREMENT,
     city varchar(30)  NOT NULL,
     idCountry int  NOT NULL,
     CONSTRAINT Cities_pk PRIMARY KEY  (idCity)
@@ -21,7 +21,7 @@ CREATE TABLE Cities (
 
 -- Table: Countries
 CREATE TABLE Countries (
-    idCountry int  NOT NULL,
+    idCountry int  NOT NULL AUTO_INCREMENT,
     country varchar(30)  NOT NULL,
     idRegion int  NOT NULL,
     CONSTRAINT Countries_pk PRIMARY KEY  (idCountry)
@@ -29,7 +29,7 @@ CREATE TABLE Countries (
 
 -- Table: Days
 CREATE TABLE Days (
-    idDay int  NOT NULL,
+    idDay int  NOT NULL AUTO_INCREMENT,
     date date  NOT NULL,
     idWeekDay int  NOT NULL,
     maxTemp int  NOT NULL,
@@ -38,16 +38,16 @@ CREATE TABLE Days (
     CONSTRAINT Days_pk PRIMARY KEY  (idDay)
 );
 
--- Table: Descrpitions
-CREATE TABLE Descrpitions (
-    idDescription int  NOT NULL,
+-- Table: Descriptions
+CREATE TABLE Descriptions (
+    idDescription int  NOT NULL AUTO_INCREMENT,
     description varchar(50)  NOT NULL,
-    CONSTRAINT Descrpitions_pk PRIMARY KEY  (idDescription)
+    CONSTRAINT Descriptions_pk PRIMARY KEY  (idDescription)
 );
 
 -- Table: ExtendedForecasts
 CREATE TABLE ExtendedForecasts (
-    idExtendedForecast int  NOT NULL,
+    idExtendedForecast int  NOT NULL AUTO_INCREMENT,
     idForecast int  NOT NULL,
     idDay int  NOT NULL,
     CONSTRAINT ExtendedForecasts_pk PRIMARY KEY  (idExtendedForecast,idForecast)
@@ -55,8 +55,7 @@ CREATE TABLE ExtendedForecasts (
 
 -- Table: Forecasts
 CREATE TABLE Forecasts (
-    idForecast int  NOT NULL,
-    idExtendedForecast int  NOT NULL,
+    idForecast int  NOT NULL AUTO_INCREMENT,
     idCity int  NOT NULL,
     idDay int  NOT NULL,
     idAtmosphericData int  NOT NULL,
@@ -66,21 +65,21 @@ CREATE TABLE Forecasts (
 
 -- Table: Regions
 CREATE TABLE Regions (
-    idRegion int  NOT NULL,
+    idRegion int  NOT NULL AUTO_INCREMENT,
     region varchar(30)  NOT NULL,
     CONSTRAINT Regions_pk PRIMARY KEY  (idRegion)
 );
 
 -- Table: WeekDays
 CREATE TABLE WeekDays (
-    idWeekDay int  NOT NULL,
+    idWeekDay int  NOT NULL AUTO_INCREMENT,
     weekDay varchar(20)  NOT NULL,
     CONSTRAINT WeekDays_pk PRIMARY KEY  (idWeekDay)
 );
 
 -- Table: WindDatas
 CREATE TABLE WindDatas (
-    idWindData int  NOT NULL,
+    idWindData int  NOT NULL AUTO_INCREMENT,
     speed decimal(5,2)  NOT NULL,
     direction decimal(4,2)  NOT NULL,
     CONSTRAINT WindDatas_pk PRIMARY KEY  (idWindData)
@@ -97,10 +96,10 @@ ALTER TABLE Countries ADD CONSTRAINT Countries_Regions
     FOREIGN KEY (idRegion)
     REFERENCES Regions (idRegion);
 
--- Reference: Days_Descrpitions (table: Days)
-ALTER TABLE Days ADD CONSTRAINT Days_Descrpitions
+-- Reference: Days_Descriptions (table: Days)
+ALTER TABLE Days ADD CONSTRAINT Days_Descriptions
     FOREIGN KEY (idDescription)
-    REFERENCES Descrpitions (idDescription);
+    REFERENCES Descriptions (idDescription);
 
 -- Reference: Days_WeekDays (table: Days)
 ALTER TABLE Days ADD CONSTRAINT Days_WeekDays
@@ -138,4 +137,3 @@ ALTER TABLE Forecasts ADD CONSTRAINT Forecasts_WindDatas
     REFERENCES WindDatas (idWindData);
 
 -- End of file.
-

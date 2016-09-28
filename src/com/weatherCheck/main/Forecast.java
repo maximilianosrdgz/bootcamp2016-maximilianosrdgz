@@ -6,14 +6,14 @@ package com.weatherCheck.main;
 public class Forecast {
 
     private Atmosphere atmosphere;
-    private CurrentDay currentDay;
+    private Day day;
     private ExtendedForecast extendedForecast;
     private Location location;
     private Wind wind;
 
-    public Forecast(Atmosphere atmosphere, CurrentDay currentDay, ExtendedForecast extendedForecast, Location location, Wind wind) {
+    public Forecast(Atmosphere atmosphere, Day day, ExtendedForecast extendedForecast, Location location, Wind wind) {
         this.atmosphere = atmosphere;
-        this.currentDay = currentDay;
+        this.day = day;
         this.extendedForecast = extendedForecast;
         this.location = location;
         this.wind = wind;
@@ -27,12 +27,12 @@ public class Forecast {
         this.atmosphere = atmosphere;
     }
 
-    public CurrentDay getCurrentDay() {
-        return currentDay;
+    public Day getDay() {
+        return day;
     }
 
-    public void setCurrentDay(CurrentDay currentDay) {
-        this.currentDay = currentDay;
+    public void setDay(Day day) {
+        this.day = day;
     }
 
     public ExtendedForecast getExtendedForecast() {
@@ -62,7 +62,7 @@ public class Forecast {
     @Override
     public String toString(){
         return "Forecast: "+atmosphere.toString()+
-                "\nCurrent Day: "+currentDay.toString()+
+                "\nCurrent Day: "+ day.toString()+
                 "\nExtended Forecast: "+extendedForecast.toString()+
                 "\nLocation: "+location.toString()+
                 "\nWind: "+wind.toString();

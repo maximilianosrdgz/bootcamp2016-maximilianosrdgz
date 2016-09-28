@@ -6,7 +6,7 @@ import java.util.Date;
 /**
  * Created by MaxPower on 24/09/2016.
  */
-public class CurrentDay {
+public class Day {
 
     private DayOfWeek day;
     private Date date;
@@ -14,7 +14,15 @@ public class CurrentDay {
     private float minTemp;
     private String description;
 
-    public CurrentDay(DayOfWeek day, Date date, float maxTemp, float minTemp, String description) {
+    public Day(){
+        day = DayOfWeek.MONDAY;
+        date = null;
+        maxTemp = 0;
+        minTemp = 0;
+        description = "";
+    }
+
+    public Day(DayOfWeek day, Date date, float maxTemp, float minTemp, String description) {
         this.day = day;
         this.date = date;
         this.maxTemp = maxTemp;
