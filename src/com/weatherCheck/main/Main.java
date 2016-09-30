@@ -27,6 +27,7 @@ public class Main {
         Connection conn = null;
         Statement stmt = null;
         Statement stmtInsert = null;
+        Statement stmtCount = null;
 
         //Object Forecast variables
         Forecast forec;
@@ -42,6 +43,8 @@ public class Main {
         DayOfWeek d;
         Date dt;
         Calendar cal = Calendar.getInstance();
+
+        //OBJECTS CREATION
 
         Scanner scannIn = new Scanner(System.in);
 
@@ -101,6 +104,8 @@ public class Main {
             //Open connection
             System.out.println("Flag 1 Connecting");
             conn = DriverManager.getConnection(DB_URL, USER, PASS);
+
+
 
             //Test INSERT
             stmtInsert = conn.createStatement();
