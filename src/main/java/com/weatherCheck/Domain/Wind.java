@@ -8,6 +8,9 @@ public class Wind {
     private float speed;
     private float direction;
 
+    public Wind(){
+    }
+
     public Wind(float speed, float direction) {
         this.speed = speed;
         this.direction = direction;

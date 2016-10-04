@@ -1,5 +1,7 @@
 package com.weatherCheck.Domain;
 
+import java.time.LocalTime;
+
 /**
  * Created by MaxPower on 24/09/2016.
  */
@@ -8,6 +10,9 @@ public class Location {
     private String country;
     private String city;
     private String region;
+
+    public Location(){
+    }
 
     public Location(String city, String country, String region){
         this.city=city;

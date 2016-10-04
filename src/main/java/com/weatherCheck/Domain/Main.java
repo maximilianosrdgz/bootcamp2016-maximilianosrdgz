@@ -1,9 +1,9 @@
 package com.weatherCheck.Domain;
 
+import com.weatherCheck.Builder.*;
 import com.weatherCheck.DBConfig.MySQLConnection;
 
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.time.DayOfWeek;
@@ -20,9 +20,11 @@ public class Main {
     public static void main(String [] args) {
 
         //DB Connection variables
-        Connection con = null;
-        Statement stmt = null;
-        Statement stmtInsert = null;
+        Connection con;
+        Statement stmtSelect;
+        Statement stmtInsert;
+        Statement stmtCount;
+        int recordCount = 0;
 
         //Object Forecast variables
         Forecast forec;
@@ -84,13 +86,48 @@ public class Main {
         System.out.println("Wind direction: ");
         dir = scannIn.nextFloat();
 
-        loc = new Location(cit, count, reg);
-        atm = new Atmosphere(hum, pres, vis);
-        da = new Day(d, dt, maxT, minT, desc);
-        extForec = new ExtendedForecast(extF);
-        win = new Wind(spd, dir);
+        //Object Build with Builders
+        atm = AtmosphereBuilder.anAtmosphere()
+                .withHumidity(hum)
+                .withPressure(pres)
+                .withVisibility(vis)
+                .build();
+        da = DayBuilder.aDay()
+                .withDate(dt)
+                .withDay(d)
+                .withDescription(desc)
+                .withMaxTemp(maxT)
+                .withMinTemp(minT)
+                .build();
+        loc = LocationBuilder.aLocation()
+                .withCity(cit)
+                .withCountry(count)
+                .withRegion(reg)
+                .build();
+        extForec = ExtendedForecastBuilder.anExtendedForecast()
+                .withExtForecast(extF)
+                .build();
+        win = WindBuilder.aWind()
+                .withDirection(dir)
+                .withSpeed(spd)
+                .build();
 
-        forec = new Forecast(atm, da, extForec, loc, win);
+        forec = ForecastBuilder.aForecast()
+                .withAtmosphere(atm)
+                .withDay(da)
+                .withExtendedForecast(extForec)
+                .withLocation(loc)
+                .withWind(win)
+                .build();
+
+        //Object Build w/o Builder
+        //loc = new Location(cit, count, reg);
+        //atm = new Atmosphere(hum, pres, vis);
+        //da = new Day(d, dt, maxT, minT, desc);
+        //extForec = new ExtendedForecast(extF);
+        //win = new Wind(spd, dir);
+
+        //forec = new Forecast(atm, da, extForec, loc, win);
 
         try {
 
@@ -99,7 +136,27 @@ public class Main {
             MySQLConnection MySQLCon = MySQLConnection.getInstance();
             con = MySQLCon.getCon();
 
-            //Test INSERT
+            stmtCount = con.createStatement();
+            System.out.println("Statement created");
+            String selCount;
+            selCount = "select count(*) 'recordCount' from Forecasts";
+            ResultSet rsCount = stmtCount.executeQuery(selCount);
+            System.out.println("Statement executed");
+
+            while (rsCount.next()) {
+
+                recordCount = rsCount.getInt("recordCount");
+
+                //Output
+                System.out.print("Record Count: " + recordCount);
+
+            }
+            recordCount++;
+
+            rsCount.close();
+            stmtCount.close();
+
+            //INSERT
             stmtInsert = con.createStatement();
             String insert;
 
@@ -112,14 +169,14 @@ public class Main {
 
             //INSERT COUNTRIES
             insert = "insert into countries (country, idRegion)\n" +
-                    "values ('"+forec.getLocation().getCountry()+"', 1)";
+                    "values ('"+forec.getLocation().getCountry()+"', "+recordCount+")";
             System.out.println(insert);
             stmtInsert.executeUpdate(insert);
             System.out.println("Data added");
 
             //INSERT CITIES
             insert = "insert into cities (city, idCountry)\n" +
-                    "values ('"+forec.getLocation().getCity()+"', 1)";
+                    "values ('"+forec.getLocation().getCity()+"', "+recordCount+")";
             System.out.println(insert);
             stmtInsert.executeUpdate(insert);
             System.out.println("Data added");
@@ -155,22 +212,22 @@ public class Main {
 
             //INSERT DAYS
             insert = "insert into Days (date, idWeekDay, maxTemp, minTemp, idDescription)\n" +
-                    "values ('2016/01/01', 1, "+forec.getDay().getMaxTemp()+
-                    ", "+forec.getDay().getMinTemp()+", 1)";
+                    "values ('2016/01/01', "+recordCount+", "+forec.getDay().getMaxTemp()+
+                    ", "+forec.getDay().getMinTemp()+", "+recordCount+")";
             System.out.println(insert);
             stmtInsert.executeUpdate(insert);
             System.out.println("Data added");
 
             //INSERT FORECASTS
             insert = "insert into Forecasts (idCity, idDay, idAtmosphericData, idWindData)\n" +
-                    "values (1, 1, 1, 1)";
+                    "values ("+recordCount+", "+recordCount+", "+recordCount+", "+recordCount+")";
             System.out.println(insert);
             stmtInsert.executeUpdate(insert);
             System.out.println("Data added");
 
             //INSERT EXTENDEDFORECASTS
             insert = "insert into ExtendedForecasts (idForecast, idDay)\n" +
-                    "values (1, 1)";
+                    "values ("+recordCount+", "+recordCount+")";
             System.out.println(insert);
             stmtInsert.executeUpdate(insert);
             System.out.println("Data added");
@@ -180,10 +237,10 @@ public class Main {
 
             //Test SELECT
             System.out.println("Flag 2 Statement");
-            stmt = con.createStatement();
+            stmtSelect = con.createStatement();
             String select;
             select = "SELECT idForecast, idCity, idDay, idAtmosphericData FROM Forecasts";
-            ResultSet rs = stmt.executeQuery(select);
+            ResultSet rs = stmtSelect.executeQuery(select);
 
             //Extract data from rs
             while (rs.next()) {
@@ -203,7 +260,9 @@ public class Main {
 
 
             rs.close();
-            stmt.close();
+            stmtSelect.close();
+
+
             con.close();
         }
         catch(Exception e){

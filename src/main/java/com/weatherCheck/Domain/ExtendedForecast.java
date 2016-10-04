@@ -9,6 +9,9 @@ public class ExtendedForecast {
 
     private ArrayList<Day> extForecast;
 
+    public ExtendedForecast(){
+    }
+
     public ExtendedForecast(ArrayList<Day> extForecast) {
         this.extForecast = extForecast;
     }

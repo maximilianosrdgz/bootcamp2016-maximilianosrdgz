@@ -11,6 +11,9 @@ public class Forecast {
     private Location location;
     private Wind wind;
 
+    public Forecast(){
+    }
+
     public Forecast(Atmosphere atmosphere, Day day, ExtendedForecast extendedForecast, Location location, Wind wind) {
         this.atmosphere = atmosphere;
         this.day = day;

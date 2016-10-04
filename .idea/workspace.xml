@@ -2,24 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="93d3e8a8-6232-452d-95b6-6b4fe18fbdcf" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/WeatherCheck/com/weatherCheck/main/Atmosphere.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/WeatherCheck/com/weatherCheck/main/Day.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/WeatherCheck/com/weatherCheck/main/ExtendedForecast.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/WeatherCheck/com/weatherCheck/main/Forecast.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/WeatherCheck/com/weatherCheck/main/Location.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/WeatherCheck/com/weatherCheck/main/Main.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/WeatherCheck/com/weatherCheck/main/Wind.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/weatherCheck/main/Atmosphere.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/weatherCheck/main/Day.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/weatherCheck/main/ExtendedForecast.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/weatherCheck/main/Forecast.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/weatherCheck/main/Location.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/weatherCheck/main/Main.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/weatherCheck/main/Wind.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/weatherCheck/Domain/Atmosphere.class" afterPath="$PROJECT_DIR$/target/classes/com/weatherCheck/Domain/Atmosphere.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/weatherCheck/Domain/Main.class" afterPath="$PROJECT_DIR$/target/classes/com/weatherCheck/Domain/Main.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WeatherCheck.iml" afterPath="$PROJECT_DIR$/WeatherCheck.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/weatherCheck/Domain/Atmosphere.java" afterPath="$PROJECT_DIR$/src/main/java/com/weatherCheck/Domain/Atmosphere.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/weatherCheck/Domain/ExtendedForecast.java" afterPath="$PROJECT_DIR$/src/main/java/com/weatherCheck/Domain/ExtendedForecast.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/weatherCheck/Domain/Forecast.java" afterPath="$PROJECT_DIR$/src/main/java/com/weatherCheck/Domain/Forecast.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/weatherCheck/Domain/Location.java" afterPath="$PROJECT_DIR$/src/main/java/com/weatherCheck/Domain/Location.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/weatherCheck/Domain/Main.java" afterPath="$PROJECT_DIR$/src/main/java/com/weatherCheck/Domain/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/weatherCheck/Domain/Wind.java" afterPath="$PROJECT_DIR$/src/main/java/com/weatherCheck/Domain/Wind.java" />
     </list>
     <ignored path="WeatherCheck.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -41,42 +32,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Forecast.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/weatherCheck/Domain/Forecast.java">
+      <file leaf-file-name="Wind.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/weatherCheck/Domain/Wind.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
-              <folding>
-                <element signature="e#599#600#0" expanded="false" />
-                <element signature="e#632#633#0" expanded="false" />
-                <element signature="e#688#689#0" expanded="false" />
-                <element signature="e#732#733#0" expanded="false" />
-                <element signature="e#759#760#0" expanded="false" />
-                <element signature="e#785#786#0" expanded="false" />
-                <element signature="e#820#821#0" expanded="false" />
-                <element signature="e#850#851#0" expanded="false" />
-                <element signature="e#903#904#0" expanded="false" />
-                <element signature="e#942#943#0" expanded="false" />
-                <element signature="e#1016#1017#0" expanded="false" />
-                <element signature="e#1072#1073#0" expanded="false" />
-                <element signature="e#1109#1110#0" expanded="false" />
-                <element signature="e#1140#1141#0" expanded="false" />
-                <element signature="e#1190#1191#0" expanded="false" />
-                <element signature="e#1230#1231#0" expanded="false" />
-                <element signature="e#1259#1260#0" expanded="false" />
-                <element signature="e#1286#1287#0" expanded="false" />
-                <element signature="e#1324#1325#0" expanded="false" />
-                <element signature="e#1356#1357#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="204">
+              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Wind.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/weatherCheck/Domain/Wind.java">
+      <file leaf-file-name="WindBuilder.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/weatherCheck/Builder/WindBuilder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
+            <state relative-caret-position="68">
+              <caret line="7" column="31" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -85,9 +55,12 @@
       <file leaf-file-name="Atmosphere.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/weatherCheck/Domain/Atmosphere.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-140">
-              <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
-              <folding />
+            <state relative-caret-position="306">
+              <caret line="18" column="32" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
+              <folding>
+                <element signature="e#480#481#0" expanded="true" />
+                <element signature="e#511#512#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -95,8 +68,8 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/weatherCheck/Domain/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="118">
-              <caret line="192" column="44" selection-start-line="192" selection-start-column="44" selection-end-line="192" selection-end-column="44" />
+            <state relative-caret-position="142">
+              <caret line="219" column="0" selection-start-line="219" selection-start-column="0" selection-end-line="219" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -104,41 +77,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MySQLConnection.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/weatherCheck/DBConfig/MySQLConnection.java">
+      <file leaf-file-name="Forecast.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/weatherCheck/Domain/Forecast.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#857#858#0" expanded="true" />
-                <element signature="e#891#892#0" expanded="true" />
-                <element signature="e#961#962#0" expanded="true" />
-                <element signature="e#1018#1019#0" expanded="true" />
-                <element signature="e#1052#1053#0" expanded="true" />
-                <element signature="e#1078#1079#0" expanded="true" />
-                <element signature="e#1120#1121#0" expanded="true" />
-                <element signature="e#1150#1151#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Initialize.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/weatherCheck/DBConfig/Initialize.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="22" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="22" />
+            <state relative-caret-position="221">
+              <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
+      <file leaf-file-name="ForecastBuilder.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/weatherCheck/Builder/ForecastBuilder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
+            <state relative-caret-position="119">
+              <caret line="7" column="35" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -147,34 +100,19 @@
       <file leaf-file-name="Location.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/weatherCheck/Domain/Location.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
-              <folding>
-                <element signature="e#371#372#0" expanded="false" />
-                <element signature="e#401#402#0" expanded="false" />
-                <element signature="e#432#433#0" expanded="false" />
-                <element signature="e#459#460#0" expanded="false" />
-                <element signature="e#492#493#0" expanded="false" />
-                <element signature="e#521#522#0" expanded="false" />
-                <element signature="e#567#568#0" expanded="false" />
-                <element signature="e#605#606#0" expanded="false" />
-                <element signature="e#645#646#0" expanded="false" />
-                <element signature="e#677#678#0" expanded="false" />
-                <element signature="e#721#722#0" expanded="false" />
-                <element signature="e#757#758#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="187">
+              <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Day.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/weatherCheck/Domain/Day.java">
+      <file leaf-file-name="LocationBuilder.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/weatherCheck/Builder/LocationBuilder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="26" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="71">
+              <caret line="7" column="35" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -182,12 +120,19 @@
       <file leaf-file-name="ExtendedForecast.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/weatherCheck/Domain/ExtendedForecast.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="9" column="15" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="15" />
-              <folding>
-                <element signature="e#239#240#0" expanded="true" />
-                <element signature="e#285#286#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="187">
+              <caret line="11" column="30" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ExtendedForecastBuilder.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/weatherCheck/Builder/ExtendedForecastBuilder.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="10" column="43" selection-start-line="10" selection-start-column="43" selection-end-line="10" selection-end-column="43" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -198,8 +143,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Singleton" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -227,9 +172,20 @@
         <option value="$PROJECT_DIR$/src/main/java/com/weatherCheck/main/Atmosphere.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/weatherCheck/main/Day.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/weatherCheck/Domain/ExtendedForecast.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/weatherCheck/DBConfig/Initialize.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/weatherCheck/DBConfig/MySQLConnection.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/weatherCheck/Domain/Atmosphere.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/weatherCheck/Builder/AtmosphereBuilder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/weatherCheck/Builder/DayBuilder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/weatherCheck/Domain/Day.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/weatherCheck/Domain/Location.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/weatherCheck/Builder/LocationBuilder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/weatherCheck/Builder/WindBuilder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/weatherCheck/Domain/Wind.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/weatherCheck/Domain/ExtendedForecast.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/weatherCheck/Builder/ExtendedForecastBuilder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/weatherCheck/Domain/Forecast.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/weatherCheck/Builder/ForecastBuilder.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/weatherCheck/Domain/Main.java" />
       </list>
     </option>
@@ -294,9 +250,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -411,6 +367,36 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WeatherCheck" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WeatherCheck" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="weatherCheck" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Builder" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -419,9 +405,14 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop/GitHub.appref-ms" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateBuilderDialog.RecentsKey">
+      <recent name="com.weatherCheck.Builder" />
+    </key>
   </component>
   <component name="RunManager" selected="Application.Main">
     <configuration default="false" name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -721,12 +712,13 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33228347" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33228347" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32913387" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -737,7 +729,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -768,100 +759,14 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/weatherCheck/Domain/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/weatherCheck/Domain/Location.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
-          <folding>
-            <element signature="e#371#372#0" expanded="false" />
-            <element signature="e#401#402#0" expanded="false" />
-            <element signature="e#432#433#0" expanded="false" />
-            <element signature="e#459#460#0" expanded="false" />
-            <element signature="e#492#493#0" expanded="false" />
-            <element signature="e#521#522#0" expanded="false" />
-            <element signature="e#567#568#0" expanded="false" />
-            <element signature="e#605#606#0" expanded="false" />
-            <element signature="e#645#646#0" expanded="false" />
-            <element signature="e#677#678#0" expanded="false" />
-            <element signature="e#721#722#0" expanded="false" />
-            <element signature="e#757#758#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/weatherCheck/Domain/Day.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="54" column="5" selection-start-line="54" selection-start-column="5" selection-end-line="54" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/weatherCheck/Domain/ExtendedForecast.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
-          <folding>
-            <element signature="e#239#240#0" expanded="true" />
-            <element signature="e#285#286#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/weatherCheck/Domain/Forecast.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
-          <folding>
-            <element signature="e#599#600#0" expanded="false" />
-            <element signature="e#632#633#0" expanded="false" />
-            <element signature="e#688#689#0" expanded="false" />
-            <element signature="e#732#733#0" expanded="false" />
-            <element signature="e#759#760#0" expanded="false" />
-            <element signature="e#785#786#0" expanded="false" />
-            <element signature="e#820#821#0" expanded="false" />
-            <element signature="e#850#851#0" expanded="false" />
-            <element signature="e#903#904#0" expanded="false" />
-            <element signature="e#942#943#0" expanded="false" />
-            <element signature="e#1016#1017#0" expanded="false" />
-            <element signature="e#1072#1073#0" expanded="false" />
-            <element signature="e#1109#1110#0" expanded="false" />
-            <element signature="e#1140#1141#0" expanded="false" />
-            <element signature="e#1190#1191#0" expanded="false" />
-            <element signature="e#1230#1231#0" expanded="false" />
-            <element signature="e#1259#1260#0" expanded="false" />
-            <element signature="e#1286#1287#0" expanded="false" />
-            <element signature="e#1324#1325#0" expanded="false" />
-            <element signature="e#1356#1357#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/weatherCheck/Domain/Wind.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/weatherCheck/Domain/Atmosphere.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#480#481#0" expanded="true" />
+            <element signature="e#511#512#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -879,20 +784,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
-          <folding>
-            <element signature="e#371#372#0" expanded="false" />
-            <element signature="e#401#402#0" expanded="false" />
-            <element signature="e#432#433#0" expanded="false" />
-            <element signature="e#459#460#0" expanded="false" />
-            <element signature="e#492#493#0" expanded="false" />
-            <element signature="e#521#522#0" expanded="false" />
-            <element signature="e#567#568#0" expanded="false" />
-            <element signature="e#605#606#0" expanded="false" />
-            <element signature="e#645#646#0" expanded="false" />
-            <element signature="e#677#678#0" expanded="false" />
-            <element signature="e#721#722#0" expanded="false" />
-            <element signature="e#757#758#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -910,10 +802,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="12" column="31" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
-          <folding>
-            <element signature="e#239#240#0" expanded="true" />
-            <element signature="e#285#286#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -921,28 +810,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
-          <folding>
-            <element signature="e#599#600#0" expanded="false" />
-            <element signature="e#632#633#0" expanded="false" />
-            <element signature="e#688#689#0" expanded="false" />
-            <element signature="e#732#733#0" expanded="false" />
-            <element signature="e#759#760#0" expanded="false" />
-            <element signature="e#785#786#0" expanded="false" />
-            <element signature="e#820#821#0" expanded="false" />
-            <element signature="e#850#851#0" expanded="false" />
-            <element signature="e#903#904#0" expanded="false" />
-            <element signature="e#942#943#0" expanded="false" />
-            <element signature="e#1016#1017#0" expanded="false" />
-            <element signature="e#1072#1073#0" expanded="false" />
-            <element signature="e#1109#1110#0" expanded="false" />
-            <element signature="e#1140#1141#0" expanded="false" />
-            <element signature="e#1190#1191#0" expanded="false" />
-            <element signature="e#1230#1231#0" expanded="false" />
-            <element signature="e#1259#1260#0" expanded="false" />
-            <element signature="e#1286#1287#0" expanded="false" />
-            <element signature="e#1324#1325#0" expanded="false" />
-            <element signature="e#1356#1357#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -958,7 +825,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#480#481#0" expanded="true" />
+            <element signature="e#511#512#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -976,20 +846,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
-          <folding>
-            <element signature="e#371#372#0" expanded="false" />
-            <element signature="e#401#402#0" expanded="false" />
-            <element signature="e#432#433#0" expanded="false" />
-            <element signature="e#459#460#0" expanded="false" />
-            <element signature="e#492#493#0" expanded="false" />
-            <element signature="e#521#522#0" expanded="false" />
-            <element signature="e#567#568#0" expanded="false" />
-            <element signature="e#605#606#0" expanded="false" />
-            <element signature="e#645#646#0" expanded="false" />
-            <element signature="e#677#678#0" expanded="false" />
-            <element signature="e#721#722#0" expanded="false" />
-            <element signature="e#757#758#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1007,10 +864,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="12" column="31" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
-          <folding>
-            <element signature="e#239#240#0" expanded="true" />
-            <element signature="e#285#286#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1018,28 +872,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="34" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
-          <folding>
-            <element signature="e#599#600#0" expanded="false" />
-            <element signature="e#632#633#0" expanded="false" />
-            <element signature="e#688#689#0" expanded="false" />
-            <element signature="e#732#733#0" expanded="false" />
-            <element signature="e#759#760#0" expanded="false" />
-            <element signature="e#785#786#0" expanded="false" />
-            <element signature="e#820#821#0" expanded="false" />
-            <element signature="e#850#851#0" expanded="false" />
-            <element signature="e#903#904#0" expanded="false" />
-            <element signature="e#942#943#0" expanded="false" />
-            <element signature="e#1016#1017#0" expanded="false" />
-            <element signature="e#1072#1073#0" expanded="false" />
-            <element signature="e#1109#1110#0" expanded="false" />
-            <element signature="e#1140#1141#0" expanded="false" />
-            <element signature="e#1190#1191#0" expanded="false" />
-            <element signature="e#1230#1231#0" expanded="false" />
-            <element signature="e#1259#1260#0" expanded="false" />
-            <element signature="e#1286#1287#0" expanded="false" />
-            <element signature="e#1324#1325#0" expanded="false" />
-            <element signature="e#1356#1357#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1055,7 +887,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#480#481#0" expanded="true" />
+            <element signature="e#511#512#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1073,20 +908,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
-          <folding>
-            <element signature="e#371#372#0" expanded="false" />
-            <element signature="e#401#402#0" expanded="false" />
-            <element signature="e#432#433#0" expanded="false" />
-            <element signature="e#459#460#0" expanded="false" />
-            <element signature="e#492#493#0" expanded="false" />
-            <element signature="e#521#522#0" expanded="false" />
-            <element signature="e#567#568#0" expanded="false" />
-            <element signature="e#605#606#0" expanded="false" />
-            <element signature="e#645#646#0" expanded="false" />
-            <element signature="e#677#678#0" expanded="false" />
-            <element signature="e#721#722#0" expanded="false" />
-            <element signature="e#757#758#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1104,10 +926,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="12" column="31" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
-          <folding>
-            <element signature="e#239#240#0" expanded="true" />
-            <element signature="e#285#286#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1115,28 +934,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="34" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
-          <folding>
-            <element signature="e#599#600#0" expanded="false" />
-            <element signature="e#632#633#0" expanded="false" />
-            <element signature="e#688#689#0" expanded="false" />
-            <element signature="e#732#733#0" expanded="false" />
-            <element signature="e#759#760#0" expanded="false" />
-            <element signature="e#785#786#0" expanded="false" />
-            <element signature="e#820#821#0" expanded="false" />
-            <element signature="e#850#851#0" expanded="false" />
-            <element signature="e#903#904#0" expanded="false" />
-            <element signature="e#942#943#0" expanded="false" />
-            <element signature="e#1016#1017#0" expanded="false" />
-            <element signature="e#1072#1073#0" expanded="false" />
-            <element signature="e#1109#1110#0" expanded="false" />
-            <element signature="e#1140#1141#0" expanded="false" />
-            <element signature="e#1190#1191#0" expanded="false" />
-            <element signature="e#1230#1231#0" expanded="false" />
-            <element signature="e#1259#1260#0" expanded="false" />
-            <element signature="e#1286#1287#0" expanded="false" />
-            <element signature="e#1324#1325#0" expanded="false" />
-            <element signature="e#1356#1357#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1152,7 +949,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#480#481#0" expanded="true" />
+            <element signature="e#511#512#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1170,20 +970,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
-          <folding>
-            <element signature="e#371#372#0" expanded="false" />
-            <element signature="e#401#402#0" expanded="false" />
-            <element signature="e#432#433#0" expanded="false" />
-            <element signature="e#459#460#0" expanded="false" />
-            <element signature="e#492#493#0" expanded="false" />
-            <element signature="e#521#522#0" expanded="false" />
-            <element signature="e#567#568#0" expanded="false" />
-            <element signature="e#605#606#0" expanded="false" />
-            <element signature="e#645#646#0" expanded="false" />
-            <element signature="e#677#678#0" expanded="false" />
-            <element signature="e#721#722#0" expanded="false" />
-            <element signature="e#757#758#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1201,10 +988,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="12" column="31" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
-          <folding>
-            <element signature="e#239#240#0" expanded="true" />
-            <element signature="e#285#286#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1212,28 +996,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding>
-            <element signature="e#599#600#0" expanded="false" />
-            <element signature="e#632#633#0" expanded="false" />
-            <element signature="e#688#689#0" expanded="false" />
-            <element signature="e#732#733#0" expanded="false" />
-            <element signature="e#759#760#0" expanded="false" />
-            <element signature="e#785#786#0" expanded="false" />
-            <element signature="e#820#821#0" expanded="false" />
-            <element signature="e#850#851#0" expanded="false" />
-            <element signature="e#903#904#0" expanded="false" />
-            <element signature="e#942#943#0" expanded="false" />
-            <element signature="e#1016#1017#0" expanded="false" />
-            <element signature="e#1072#1073#0" expanded="false" />
-            <element signature="e#1109#1110#0" expanded="false" />
-            <element signature="e#1140#1141#0" expanded="false" />
-            <element signature="e#1190#1191#0" expanded="false" />
-            <element signature="e#1230#1231#0" expanded="false" />
-            <element signature="e#1259#1260#0" expanded="false" />
-            <element signature="e#1286#1287#0" expanded="false" />
-            <element signature="e#1324#1325#0" expanded="false" />
-            <element signature="e#1356#1357#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1249,7 +1011,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
-          <folding />
+          <folding>
+            <element signature="e#480#481#0" expanded="true" />
+            <element signature="e#511#512#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1272,98 +1037,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/weatherCheck/main/Astronomy.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/weatherCheck/Domain/Forecast.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
-          <folding>
-            <element signature="e#599#600#0" expanded="false" />
-            <element signature="e#632#633#0" expanded="false" />
-            <element signature="e#688#689#0" expanded="false" />
-            <element signature="e#732#733#0" expanded="false" />
-            <element signature="e#759#760#0" expanded="false" />
-            <element signature="e#785#786#0" expanded="false" />
-            <element signature="e#820#821#0" expanded="false" />
-            <element signature="e#850#851#0" expanded="false" />
-            <element signature="e#903#904#0" expanded="false" />
-            <element signature="e#942#943#0" expanded="false" />
-            <element signature="e#1016#1017#0" expanded="false" />
-            <element signature="e#1072#1073#0" expanded="false" />
-            <element signature="e#1109#1110#0" expanded="false" />
-            <element signature="e#1140#1141#0" expanded="false" />
-            <element signature="e#1190#1191#0" expanded="false" />
-            <element signature="e#1230#1231#0" expanded="false" />
-            <element signature="e#1259#1260#0" expanded="false" />
-            <element signature="e#1286#1287#0" expanded="false" />
-            <element signature="e#1324#1325#0" expanded="false" />
-            <element signature="e#1356#1357#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/weatherCheck/Domain/Location.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
-          <folding>
-            <element signature="e#371#372#0" expanded="false" />
-            <element signature="e#401#402#0" expanded="false" />
-            <element signature="e#432#433#0" expanded="false" />
-            <element signature="e#459#460#0" expanded="false" />
-            <element signature="e#492#493#0" expanded="false" />
-            <element signature="e#521#522#0" expanded="false" />
-            <element signature="e#567#568#0" expanded="false" />
-            <element signature="e#605#606#0" expanded="false" />
-            <element signature="e#645#646#0" expanded="false" />
-            <element signature="e#677#678#0" expanded="false" />
-            <element signature="e#721#722#0" expanded="false" />
-            <element signature="e#757#758#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/weatherCheck/Domain/Wind.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_102/src.zip!/java/time/DayOfWeek.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-665">
           <caret line="108" column="12" selection-start-line="108" selection-start-column="12" selection-end-line="108" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/weatherCheck/Domain/Day.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="26" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/weatherCheck/Domain/Atmosphere.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-140">
-          <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/weatherCheck/Domain/ExtendedForecast.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="9" column="15" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="15" />
-          <folding>
-            <element signature="e#239#240#0" expanded="true" />
-            <element signature="e#285#286#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1375,14 +1052,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/weatherCheck/DBConfig/Initialization.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="27" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/weatherCheck/DBConfig/Initialization.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/weatherCheck/DBConfig/Initialize.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -1393,26 +1063,133 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/weatherCheck/DBConfig/MySQLConnection.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
+        <state relative-caret-position="442">
           <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#857#858#0" expanded="true" />
-            <element signature="e#891#892#0" expanded="true" />
-            <element signature="e#961#962#0" expanded="true" />
-            <element signature="e#1018#1019#0" expanded="true" />
-            <element signature="e#1052#1053#0" expanded="true" />
-            <element signature="e#1078#1079#0" expanded="true" />
-            <element signature="e#1120#1121#0" expanded="true" />
-            <element signature="e#1150#1151#0" expanded="true" />
+            <element signature="e#405#406#0" expanded="false" />
+            <element signature="e#439#440#0" expanded="false" />
+            <element signature="e#857#858#0" expanded="false" />
+            <element signature="e#891#892#0" expanded="false" />
+            <element signature="e#961#962#0" expanded="false" />
+            <element signature="e#1018#1019#0" expanded="false" />
+            <element signature="e#1052#1053#0" expanded="false" />
+            <element signature="e#1078#1079#0" expanded="false" />
+            <element signature="e#1120#1121#0" expanded="false" />
+            <element signature="e#1150#1151#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/weatherCheck/Builder/AtmosphereBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+          <folding>
+            <element signature="e#343#344#0" expanded="true" />
+            <element signature="e#389#390#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/weatherCheck/Domain/Day.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/weatherCheck/Builder/DayBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="802">
+          <caret line="51" column="25" selection-start-line="51" selection-start-column="25" selection-end-line="51" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/weatherCheck/Domain/Location.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/weatherCheck/Builder/LocationBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="71">
+          <caret line="7" column="35" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/weatherCheck/Builder/WindBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="7" column="31" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/weatherCheck/Domain/Wind.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/weatherCheck/Domain/Atmosphere.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="32" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
+          <folding>
+            <element signature="e#480#481#0" expanded="true" />
+            <element signature="e#511#512#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/weatherCheck/Domain/ExtendedForecast.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="30" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/weatherCheck/Builder/ExtendedForecastBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="10" column="43" selection-start-line="10" selection-start-column="43" selection-end-line="10" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/weatherCheck/Domain/Forecast.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/weatherCheck/Builder/ForecastBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="35" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/weatherCheck/Domain/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="192" column="44" selection-start-line="192" selection-start-column="44" selection-end-line="192" selection-end-column="44" />
+        <state relative-caret-position="142">
+          <caret line="219" column="0" selection-start-line="219" selection-start-column="0" selection-end-line="219" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

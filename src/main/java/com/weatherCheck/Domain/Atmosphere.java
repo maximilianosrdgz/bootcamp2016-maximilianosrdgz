@@ -1,5 +1,6 @@
 package com.weatherCheck.Domain;
 
+import com.weatherCheck.Builder.*;
 /**
  * Created by MaxPower on 23/09/2016.
  */
@@ -8,6 +9,9 @@ public class Atmosphere {
     private float humidity;
     private float pressure;
     private float visibility;
+
+    public Atmosphere (){
+    }
 
     public Atmosphere(float humidity, float pressure, float visibility) {
         this.humidity = humidity;
