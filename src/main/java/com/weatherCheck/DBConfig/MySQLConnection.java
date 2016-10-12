@@ -9,10 +9,13 @@ import java.sql.SQLException;
  * Created by MaxPower on 02/10/2016.
  */
 public class MySQLConnection {
-    private static MySQLConnection ourInstance = new MySQLConnection();
+    private static MySQLConnection ourInstance;
     public Connection con;
 
     public static MySQLConnection getInstance() {
+        if(ourInstance == null){
+            ourInstance = new MySQLConnection();
+        }
         return ourInstance;
     }
 

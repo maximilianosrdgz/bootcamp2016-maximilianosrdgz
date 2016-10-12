@@ -1,7 +1,7 @@
 package com.weatherCheck.DataAccess;
 
 import com.weatherCheck.DBConfig.MySQLConnection;
-import com.weatherCheck.Domain.Location;
+import com.weatherCheck.Domain.Day;
 
 import java.sql.Connection;
 import java.sql.Statement;
@@ -9,38 +9,39 @@ import java.sql.Statement;
 /**
  * Created by MaxPower on 11/10/2016.
  */
-public class LocationDAO {
+public class DayDAO {
 
     MySQLConnection MySQLCon;
     Connection con;
 
-    public void save(Location loc, int recordCount){
+    public void save(Day d, int recordCount){
 
         MySQLCon = MySQLConnection.getInstance();
         con = MySQLCon.getCon();
         Statement stmtInsert;
 
         try{
+            //INSERT DESCRIPTIONS
             stmtInsert = con.createStatement();
             String insert;
 
-            //INSERT REGION
-            insert = "insert into regions (region)\n" +
-                    "values ('"+loc.getRegion()+"')";
+            insert = "insert into Descriptions (description)\n" +
+                    "values ('"+d.getDescription()+"')";
             System.out.println(insert);
             stmtInsert.executeUpdate(insert);
             System.out.println("Data added");
 
-            //INSERT COUNTRIES
-            insert = "insert into countries (country, idRegion)\n" +
-                    "values ('"+loc.getCountry()+"', "+recordCount+")";
+            //INSERT WEEKDAYS
+            insert = "insert into WeekDays (weekDay)\n" +
+                    "values ('"+d.getDay().toString()+"')";
             System.out.println(insert);
             stmtInsert.executeUpdate(insert);
             System.out.println("Data added");
 
-            //INSERT CITIES
-            insert = "insert into cities (city, idCountry)\n" +
-                    "values ('"+loc.getCity()+"', "+recordCount+")";
+            //INSERT DAYS
+            insert = "insert into Days (date, idWeekDay, maxTemp, minTemp, idDescription)\n" +
+                    "values ('2016/01/01', "+recordCount+", "+d.getMaxTemp()+
+                    ", "+d.getMinTemp()+", "+recordCount+")";
             System.out.println(insert);
             stmtInsert.executeUpdate(insert);
             System.out.println("Data added");
@@ -51,9 +52,5 @@ public class LocationDAO {
         catch(Exception e){
 
         }
-
-
-
     }
-
 }

@@ -2,6 +2,7 @@ package com.weatherCheck.Domain;
 
 import com.weatherCheck.Builder.*;
 import com.weatherCheck.DBConfig.MySQLConnection;
+import com.weatherCheck.DataAccess.*;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -22,7 +23,7 @@ public class Main {
         //DB Connection variables
         Connection con;
         Statement stmtSelect;
-        Statement stmtInsert;
+        //Statement stmtInsert;
         Statement stmtCount;
         int recordCount = 0;
 
@@ -120,14 +121,8 @@ public class Main {
                 .withWind(win)
                 .build();
 
-        //Object Build w/o Builder
-        //loc = new Location(cit, count, reg);
-        //atm = new Atmosphere(hum, pres, vis);
-        //da = new Day(d, dt, maxT, minT, desc);
-        //extForec = new ExtendedForecast(extF);
-        //win = new Wind(spd, dir);
 
-        //forec = new Forecast(atm, da, extForec, loc, win);
+
 
         try {
 
@@ -148,7 +143,7 @@ public class Main {
                 recordCount = rsCount.getInt("recordCount");
 
                 //Output
-                System.out.print("Record Count: " + recordCount);
+                System.out.println("Record Count: " + recordCount);
 
             }
             recordCount++;
@@ -156,6 +151,32 @@ public class Main {
             rsCount.close();
             stmtCount.close();
 
+            //DAO Saves
+            LocationDAO locDAO = new LocationDAO();
+            locDAO.save(forec.getLocation(), recordCount);
+
+            System.out.println("Record Count: " + recordCount);
+
+            DayDAO dDao = new DayDAO();
+            dDao.save(forec.getDay(), recordCount);
+
+            System.out.println("Record Count: " + recordCount);
+
+            AtmosphereDAO atmosDAO = new AtmosphereDAO();
+            atmosDAO.save(forec.getAtmosphere(), recordCount);
+
+            System.out.println("Record Count: " + recordCount);
+
+            WindDAO windDAO = new WindDAO();
+            windDAO.save(forec.getWind(), recordCount);
+
+            ForecastDAO foreDAO = new ForecastDAO();
+            foreDAO.save(forec, recordCount);
+
+            ExtendedForecastDAO extForeDAO = new ExtendedForecastDAO();
+            extForeDAO.save(forec.getExtendedForecast(), recordCount);
+
+            /*
             //INSERT
             stmtInsert = con.createStatement();
             String insert;
@@ -195,6 +216,14 @@ public class Main {
             stmtInsert.executeUpdate(insert);
             System.out.println("Data added");
 
+            //INSERT DAYS
+            insert = "insert into Days (date, idWeekDay, maxTemp, minTemp, idDescription)\n" +
+                    "values ('2016/01/01', "+recordCount+", "+forec.getDay().getMaxTemp()+
+                    ", "+forec.getDay().getMinTemp()+", "+recordCount+")";
+            System.out.println(insert);
+            stmtInsert.executeUpdate(insert);
+            System.out.println("Data added");
+
             //INSERT ATMOSPHERICDATAS
             insert = "insert into AtmosphericDatas (humidity, preasure, visibility)\n" +
                     "values ("+forec.getAtmosphere().getHumidity()+", "+forec.getAtmosphere().getPressure()+
@@ -206,14 +235,6 @@ public class Main {
             //INSERT WINDDATAS
             insert = "insert into WindDatas (speed, direction)\n" +
                     "values ("+forec.getWind().getSpeed()+", "+forec.getWind().getDirection()+")";
-            System.out.println(insert);
-            stmtInsert.executeUpdate(insert);
-            System.out.println("Data added");
-
-            //INSERT DAYS
-            insert = "insert into Days (date, idWeekDay, maxTemp, minTemp, idDescription)\n" +
-                    "values ('2016/01/01', "+recordCount+", "+forec.getDay().getMaxTemp()+
-                    ", "+forec.getDay().getMinTemp()+", "+recordCount+")";
             System.out.println(insert);
             stmtInsert.executeUpdate(insert);
             System.out.println("Data added");
@@ -231,8 +252,7 @@ public class Main {
             System.out.println(insert);
             stmtInsert.executeUpdate(insert);
             System.out.println("Data added");
-
-
+            */
 
 
             //Test SELECT
@@ -267,30 +287,7 @@ public class Main {
         }
         catch(Exception e){
 
-        } // Estas excepciones estaban el uno de los códigos que usé para guiarme, pero si las agrego no reonoce el objeto SQLException,
-          // así que no estoy manejando excepciones aún
-
-        /*
-        catch (SQLException se) {
-            //Handle errors for JDBC
-            se.printStackTrace();
-        } catch (Exception e) {
-            //Handle errors for Class.forName
-            e.printStackTrace();
-        } finally {
-            //finally block used to close resources
-            try {
-                if (stmt != null)
-                    stmt.close();
-            } catch (SQLException se2) {
-            }// nothing we can do
-            try {
-                if (conn != null)
-                    conn.close();
-            } catch (SQLException se) {
-                se.printStackTrace();
-            }//end finally try
-        }   //end try   */
+        }
         System.out.println("Flag 3 End");
     }
     }
