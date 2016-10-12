@@ -150,6 +150,7 @@ public class Main {
 
             rsCount.close();
             stmtCount.close();
+            //MySQLCon.getCon().close();
 
             //DAO Saves
             LocationDAO locDAO = new LocationDAO();
@@ -257,7 +258,7 @@ public class Main {
 
             //Test SELECT
             System.out.println("Flag 2 Statement");
-            stmtSelect = con.createStatement();
+            stmtSelect = MySQLCon.getCon().createStatement();
             String select;
             select = "SELECT idForecast, idCity, idDay, idAtmosphericData FROM Forecasts";
             ResultSet rs = stmtSelect.executeQuery(select);
@@ -283,7 +284,7 @@ public class Main {
             stmtSelect.close();
 
 
-            con.close();
+            //MySQLCon.getCon().close();
         }
         catch(Exception e){
 

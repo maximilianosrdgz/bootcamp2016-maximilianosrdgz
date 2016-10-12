@@ -12,17 +12,16 @@ import java.sql.Statement;
 public class DayDAO {
 
     MySQLConnection MySQLCon;
-    Connection con;
+    //Connection con;
 
     public void save(Day d, int recordCount){
 
         MySQLCon = MySQLConnection.getInstance();
-        con = MySQLCon.getCon();
         Statement stmtInsert;
 
         try{
             //INSERT DESCRIPTIONS
-            stmtInsert = con.createStatement();
+            stmtInsert = MySQLCon.getCon().createStatement();
             String insert;
 
             insert = "insert into Descriptions (description)\n" +
@@ -47,7 +46,7 @@ public class DayDAO {
             System.out.println("Data added");
 
             stmtInsert.close();
-            con.close();
+            //MySQLCon.getCon().close();
         }
         catch(Exception e){
 

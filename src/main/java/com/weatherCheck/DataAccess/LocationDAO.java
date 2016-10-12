@@ -12,16 +12,15 @@ import java.sql.Statement;
 public class LocationDAO {
 
     MySQLConnection MySQLCon;
-    Connection con;
+    //Connection con;
 
     public void save(Location loc, int recordCount){
 
         MySQLCon = MySQLConnection.getInstance();
-        con = MySQLCon.getCon();
         Statement stmtInsert;
 
         try{
-            stmtInsert = con.createStatement();
+            stmtInsert = MySQLCon.getCon().createStatement();
             String insert;
 
             //INSERT REGION
@@ -46,7 +45,7 @@ public class LocationDAO {
             System.out.println("Data added");
 
             stmtInsert.close();
-            con.close();
+            //MySQLCon.getCon().close();
         }
         catch(Exception e){
 

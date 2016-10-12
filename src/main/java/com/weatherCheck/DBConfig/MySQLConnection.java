@@ -10,7 +10,7 @@ import java.sql.SQLException;
  */
 public class MySQLConnection {
     private static MySQLConnection ourInstance;
-    public Connection con;
+    private Connection con;
 
     public static MySQLConnection getInstance() {
         if(ourInstance == null){
@@ -24,7 +24,7 @@ public class MySQLConnection {
         try {
 
             Class.forName(JDBC_DRIVER);
-            con= DriverManager.getConnection(DB_URL, USER, PASS);
+            con = DriverManager.getConnection(DB_URL, USER, PASS);
             System.out.println("Connected");
 
         } catch (ClassNotFoundException e) {
