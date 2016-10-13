@@ -27,10 +27,10 @@ public class Main {
 
         //Esto es lo que vi en el ejemplo que me mostraron el miercoles, lo cambiepara que tenga el nombre de mi Beans.xml
         //y el id del bean, pero si lo pongo no anda. Compila pero cuando ejecuta arroja muchos errores. Tampoco se si va aca:
-        //ApplicationContext context = new ClassPathXmlApplicationContext(new String[] {"Beans.xml"});
-        //MySQLConnection mySQLCon = (MySQLConnection)context.getBean("mySQLConnection");
+        ApplicationContext context = new ClassPathXmlApplicationContext(new String[] {"Beans.xml"});
+        MySQLConnection mySQLCon = (MySQLConnection)context.getBean("mySQLConnection"); //Ya probé con y sin esta línea
 
-        MySQLConnection mySQLCon;
+        //MySQLConnection mySQLCon;
         Connection con;
         Statement stmtSelect;
         Statement stmtCount;
