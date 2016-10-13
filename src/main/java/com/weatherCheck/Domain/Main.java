@@ -3,6 +3,7 @@ package com.weatherCheck.Domain;
 import com.weatherCheck.Builder.*;
 import com.weatherCheck.DBConfig.MySQLConnection;
 import com.weatherCheck.DataAccess.*;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -13,19 +14,28 @@ import java.util.Date;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
 /**
  * Created by MaxPower on 23/09/2016.
  */
 public class Main {
 
+
     public static void main(String [] args) {
 
-        //DB Connection variables
+        //Esto es lo que vi en el ejemplo que me mostraron el miercoles, lo cambiepara que tenga el nombre de mi Beans.xml
+        //y el id del bean, pero si lo pongo no anda. Compila pero cuando ejecuta arroja muchos errores. Tampoco se si va aca:
+        //ApplicationContext context = new ClassPathXmlApplicationContext(new String[] {"Beans.xml"});
+        //MySQLConnection mySQLCon = (MySQLConnection)context.getBean("mySQLConnection");
+
+        MySQLConnection mySQLCon;
         Connection con;
         Statement stmtSelect;
-        //Statement stmtInsert;
         Statement stmtCount;
         int recordCount = 0;
+
 
         //Object Forecast variables
         Forecast forec;
@@ -122,16 +132,15 @@ public class Main {
                 .build();
 
 
-
-
         try {
 
-            //Open connection
+            //Open connection without Spring
+            /*
             System.out.println("Flag 1 Connecting");
-            MySQLConnection MySQLCon = MySQLConnection.getInstance();
-            con = MySQLCon.getCon();
+            MySQLConnection mySQLCon = MySQLConnection.getInstance();
+            con = mySQLCon.getCon();
 
-            stmtCount = con.createStatement();
+            stmtCount = mySQLCon.getCon().createStatement();
             System.out.println("Statement created");
             String selCount;
             selCount = "select count(*) 'recordCount' from Forecasts";
@@ -149,8 +158,10 @@ public class Main {
             recordCount++;
 
             rsCount.close();
-            stmtCount.close();
-            //MySQLCon.getCon().close();
+            stmtCount.close();*/
+
+            //recordCount hardcodeado
+            recordCount = 2;
 
             //DAO Saves
             LocationDAO locDAO = new LocationDAO();
@@ -177,118 +188,11 @@ public class Main {
             ExtendedForecastDAO extForeDAO = new ExtendedForecastDAO();
             extForeDAO.save(forec.getExtendedForecast(), recordCount);
 
-            /*
-            //INSERT
-            stmtInsert = con.createStatement();
-            String insert;
-
-            //INSERT REGION
-            insert = "insert into regions (region)\n" +
-                    "values ('"+forec.getLocation().getRegion()+"')";
-            System.out.println(insert);
-            stmtInsert.executeUpdate(insert);
-            System.out.println("Data added");
-
-            //INSERT COUNTRIES
-            insert = "insert into countries (country, idRegion)\n" +
-                    "values ('"+forec.getLocation().getCountry()+"', "+recordCount+")";
-            System.out.println(insert);
-            stmtInsert.executeUpdate(insert);
-            System.out.println("Data added");
-
-            //INSERT CITIES
-            insert = "insert into cities (city, idCountry)\n" +
-                    "values ('"+forec.getLocation().getCity()+"', "+recordCount+")";
-            System.out.println(insert);
-            stmtInsert.executeUpdate(insert);
-            System.out.println("Data added");
-
-            //INSERT DESCRIPTIONS
-            insert = "insert into Descriptions (description)\n" +
-                    "values ('"+forec.getDay().getDescription()+"')";
-            System.out.println(insert);
-            stmtInsert.executeUpdate(insert);
-            System.out.println("Data added");
-
-            //INSERT WEEKDAYS
-            insert = "insert into WeekDays (weekDay)\n" +
-                    "values ('"+forec.getDay().getDay().toString()+"')";
-            System.out.println(insert);
-            stmtInsert.executeUpdate(insert);
-            System.out.println("Data added");
-
-            //INSERT DAYS
-            insert = "insert into Days (date, idWeekDay, maxTemp, minTemp, idDescription)\n" +
-                    "values ('2016/01/01', "+recordCount+", "+forec.getDay().getMaxTemp()+
-                    ", "+forec.getDay().getMinTemp()+", "+recordCount+")";
-            System.out.println(insert);
-            stmtInsert.executeUpdate(insert);
-            System.out.println("Data added");
-
-            //INSERT ATMOSPHERICDATAS
-            insert = "insert into AtmosphericDatas (humidity, preasure, visibility)\n" +
-                    "values ("+forec.getAtmosphere().getHumidity()+", "+forec.getAtmosphere().getPressure()+
-                    ", "+forec.getAtmosphere().getVisibility()+")";
-            System.out.println(insert);
-            stmtInsert.executeUpdate(insert);
-            System.out.println("Data added");
-
-            //INSERT WINDDATAS
-            insert = "insert into WindDatas (speed, direction)\n" +
-                    "values ("+forec.getWind().getSpeed()+", "+forec.getWind().getDirection()+")";
-            System.out.println(insert);
-            stmtInsert.executeUpdate(insert);
-            System.out.println("Data added");
-
-            //INSERT FORECASTS
-            insert = "insert into Forecasts (idCity, idDay, idAtmosphericData, idWindData)\n" +
-                    "values ("+recordCount+", "+recordCount+", "+recordCount+", "+recordCount+")";
-            System.out.println(insert);
-            stmtInsert.executeUpdate(insert);
-            System.out.println("Data added");
-
-            //INSERT EXTENDEDFORECASTS
-            insert = "insert into ExtendedForecasts (idForecast, idDay)\n" +
-                    "values ("+recordCount+", "+recordCount+")";
-            System.out.println(insert);
-            stmtInsert.executeUpdate(insert);
-            System.out.println("Data added");
-            */
-
-
-            //Test SELECT
-            System.out.println("Flag 2 Statement");
-            stmtSelect = MySQLCon.getCon().createStatement();
-            String select;
-            select = "SELECT idForecast, idCity, idDay, idAtmosphericData FROM Forecasts";
-            ResultSet rs = stmtSelect.executeQuery(select);
-
-            //Extract data from rs
-            while (rs.next()) {
-
-                int idForecast = rs.getInt("idForecast");
-                float idCity = rs.getFloat("idCity");
-                float idDay = rs.getFloat("idDay");
-                float idAtmosphericData = rs.getFloat("idAtmosphericData");
-
-                //Output
-                System.out.print("ID Forec: " + idForecast);
-                System.out.print(", ID City: " + idCity);
-                System.out.print(", ID Day: " + idDay);
-                System.out.println(", ID Atm: " + idAtmosphericData);
-
-            }
-
-
-            rs.close();
-            stmtSelect.close();
-
-
-            //MySQLCon.getCon().close();
         }
         catch(Exception e){
 
         }
         System.out.println("Flag 3 End");
     }
+
     }

@@ -1,5 +1,7 @@
 package com.weatherCheck.DBConfig;
 
+import org.springframework.stereotype.Component;
+
 import static com.weatherCheck.DBConfig.Initialize.*;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -8,16 +10,17 @@ import java.sql.SQLException;
 /**
  * Created by MaxPower on 02/10/2016.
  */
+@Component
 public class MySQLConnection {
-    private static MySQLConnection ourInstance;
+    //private static MySQLConnection ourInstance;
     private Connection con;
-
+    /*
     public static MySQLConnection getInstance() {
         if(ourInstance == null){
             ourInstance = new MySQLConnection();
         }
         return ourInstance;
-    }
+    }*/
 
     private MySQLConnection() {
 
@@ -35,19 +38,7 @@ public class MySQLConnection {
 
     }
 
-    public static MySQLConnection getOurInstance() {
-        return ourInstance;
-    }
-
-    public static void setOurInstance(MySQLConnection ourInstance) {
-        MySQLConnection.ourInstance = ourInstance;
-    }
-
     public Connection getCon() {
         return con;
-    }
-
-    public void setCon(Connection con) {
-        this.con = con;
     }
 }

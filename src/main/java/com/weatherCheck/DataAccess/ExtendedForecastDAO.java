@@ -2,6 +2,9 @@ package com.weatherCheck.DataAccess;
 
 import com.weatherCheck.DBConfig.MySQLConnection;
 import com.weatherCheck.Domain.ExtendedForecast;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.sql.Connection;
 import java.sql.Statement;
@@ -11,16 +14,17 @@ import java.sql.Statement;
  */
 public class ExtendedForecastDAO {
 
-    MySQLConnection MySQLCon;
-    //Connection con;
+    @Autowired
+    MySQLConnection mySQLCon;
 
     public void save(ExtendedForecast extFore, int recordCount){
 
-        MySQLCon = MySQLConnection.getInstance();
+        //mySQLCon = MySQLConnection.getInstance();
         Statement stmtInsert;
 
         try{
-            stmtInsert = MySQLCon.getCon().createStatement();
+
+            stmtInsert = mySQLCon.getCon().createStatement();
             String insert;
 
             //INSERT EXTENDEDFORECASTS
@@ -31,7 +35,6 @@ public class ExtendedForecastDAO {
             System.out.println("Data added");
 
             stmtInsert.close();
-            MySQLCon.getCon().close();
         }
         catch(Exception e){
 

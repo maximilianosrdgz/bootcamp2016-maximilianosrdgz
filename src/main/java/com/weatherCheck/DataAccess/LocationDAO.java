@@ -2,8 +2,10 @@ package com.weatherCheck.DataAccess;
 
 import com.weatherCheck.DBConfig.MySQLConnection;
 import com.weatherCheck.Domain.Location;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import java.sql.Connection;
 import java.sql.Statement;
 
 /**
@@ -11,16 +13,18 @@ import java.sql.Statement;
  */
 public class LocationDAO {
 
-    MySQLConnection MySQLCon;
-    //Connection con;
+    @Autowired
+    MySQLConnection mySQLCon;
 
     public void save(Location loc, int recordCount){
 
-        MySQLCon = MySQLConnection.getInstance();
+        //mySQLCon = MySQLConnection.getInstance();
         Statement stmtInsert;
 
         try{
-            stmtInsert = MySQLCon.getCon().createStatement();
+
+
+            stmtInsert = mySQLCon.getCon().createStatement();
             String insert;
 
             //INSERT REGION
@@ -45,7 +49,6 @@ public class LocationDAO {
             System.out.println("Data added");
 
             stmtInsert.close();
-            //MySQLCon.getCon().close();
         }
         catch(Exception e){
 

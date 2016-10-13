@@ -2,8 +2,10 @@ package com.weatherCheck.DataAccess;
 
 import com.weatherCheck.DBConfig.MySQLConnection;
 import com.weatherCheck.Domain.Day;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import java.sql.Connection;
 import java.sql.Statement;
 
 /**
@@ -11,17 +13,18 @@ import java.sql.Statement;
  */
 public class DayDAO {
 
-    MySQLConnection MySQLCon;
-    //Connection con;
+    @Autowired
+    MySQLConnection mySQLCon;
 
     public void save(Day d, int recordCount){
 
-        MySQLCon = MySQLConnection.getInstance();
+        //mySQLCon = MySQLConnection.getInstance();
         Statement stmtInsert;
 
         try{
+
             //INSERT DESCRIPTIONS
-            stmtInsert = MySQLCon.getCon().createStatement();
+            stmtInsert = mySQLCon.getCon().createStatement();
             String insert;
 
             insert = "insert into Descriptions (description)\n" +
@@ -46,7 +49,6 @@ public class DayDAO {
             System.out.println("Data added");
 
             stmtInsert.close();
-            //MySQLCon.getCon().close();
         }
         catch(Exception e){
 

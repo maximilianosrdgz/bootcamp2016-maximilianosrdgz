@@ -2,6 +2,9 @@ package com.weatherCheck.DataAccess;
 
 import com.weatherCheck.DBConfig.MySQLConnection;
 import com.weatherCheck.Domain.Atmosphere;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.sql.Connection;
 import java.sql.Statement;
@@ -11,16 +14,17 @@ import java.sql.Statement;
  */
 public class AtmosphereDAO {
 
-    MySQLConnection MySQLCon;
-    //Connection con;
+    @Autowired
+    MySQLConnection mySQLCon;
 
     public void save(Atmosphere atmos, int recordCount){
 
-        MySQLCon = MySQLConnection.getInstance();
+        //mySQLCon = MySQLConnection.getInstance();
         Statement stmtInsert;
 
         try{
-            stmtInsert = MySQLCon.getCon().createStatement();
+
+            stmtInsert = mySQLCon.getCon().createStatement();
             String insert;
 
             //INSERT ATMOSPHERICDATAS
@@ -32,7 +36,6 @@ public class AtmosphereDAO {
             System.out.println("Data added");
 
             stmtInsert.close();
-            //MySQLCon.getCon().close();
         }
         catch(Exception e){
 
