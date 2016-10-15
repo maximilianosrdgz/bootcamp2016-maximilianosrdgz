@@ -3,10 +3,8 @@ package com.weatherCheck.Domain;
 import com.weatherCheck.Builder.*;
 import com.weatherCheck.DBConfig.MySQLConnection;
 import com.weatherCheck.DataAccess.*;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import java.sql.Connection;
-import java.sql.ResultSet;
 import java.sql.Statement;
 import java.time.DayOfWeek;
 import java.util.Calendar;
@@ -25,10 +23,9 @@ public class Main {
 
     public static void main(String [] args) {
 
-        //Esto es lo que vi en el ejemplo que me mostraron el miercoles, lo cambiepara que tenga el nombre de mi Beans.xml
+        //Esto es lo que vi en el ejemplo que me mostraron el miercoles, lo cambiepara que tenga el nombre de mi beans.xml
         //y el id del bean, pero si lo pongo no anda. Compila pero cuando ejecuta arroja muchos errores. Tampoco se si va aca:
-        ApplicationContext context = new ClassPathXmlApplicationContext(new String[] {"Beans.xml"});
-        MySQLConnection mySQLCon = (MySQLConnection)context.getBean("mySQLConnection"); //Ya probé con y sin esta línea
+        ApplicationContext context = new ClassPathXmlApplicationContext(new String[] {"beans.xml"});
 
         //MySQLConnection mySQLCon;
         Connection con;
@@ -161,32 +158,38 @@ public class Main {
             stmtCount.close();*/
 
             //recordCount hardcodeado
-            recordCount = 2;
+            recordCount = 3;
 
             //DAO Saves
-            LocationDAO locDAO = new LocationDAO();
-            locDAO.save(forec.getLocation(), recordCount);
+            //LocationDAO locDAO = new LocationDAO();
+            LocationDAO locationDAO = (LocationDAO)context.getBean("locationDAO");
+            locationDAO.save(forec.getLocation(), recordCount);
 
             System.out.println("Record Count: " + recordCount);
 
-            DayDAO dDao = new DayDAO();
-            dDao.save(forec.getDay(), recordCount);
+            //DayDAO dDao = new DayDAO();
+            DayDAO dayDAO = (DayDAO)context.getBean("dayDAO");
+            dayDAO.save(forec.getDay(), recordCount);
 
             System.out.println("Record Count: " + recordCount);
 
-            AtmosphereDAO atmosDAO = new AtmosphereDAO();
-            atmosDAO.save(forec.getAtmosphere(), recordCount);
+            //AtmosphereDAO atmosDAO = new AtmosphereDAO();
+            AtmosphereDAO atmosphereDAO = (AtmosphereDAO)context.getBean("atmosphereDAO");
+            atmosphereDAO.save(forec.getAtmosphere(), recordCount);
 
             System.out.println("Record Count: " + recordCount);
 
-            WindDAO windDAO = new WindDAO();
+            //WindDAO windDAO = new WindDAO();
+            WindDAO windDAO = (WindDAO)context.getBean("windDAO");
             windDAO.save(forec.getWind(), recordCount);
 
-            ForecastDAO foreDAO = new ForecastDAO();
-            foreDAO.save(forec, recordCount);
+            //ForecastDAO foreDAO = new ForecastDAO();
+            ForecastDAO forecastDAO = (ForecastDAO)context.getBean("forecastDAO");
+            forecastDAO.save(forec, recordCount);
 
-            ExtendedForecastDAO extForeDAO = new ExtendedForecastDAO();
-            extForeDAO.save(forec.getExtendedForecast(), recordCount);
+            //ExtendedForecastDAO extForeDAO = new ExtendedForecastDAO();
+            ExtendedForecastDAO extendedForecastDAO = (ExtendedForecastDAO)context.getBean("extendedForecastDAO");
+            extendedForecastDAO.save(forec.getExtendedForecast(), recordCount);
 
         }
         catch(Exception e){
